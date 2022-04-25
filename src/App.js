@@ -20,7 +20,7 @@ function App() {
   </Switch>
   )
   return (
-   <Router  basename={process.env.PUBLIC_URL}   >
+   <Router>
      <ErrorBoundary>
      {routes}
      </ErrorBoundary>
