@@ -1,5 +1,16 @@
 import React from 'react'
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
+import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined';
 
+const renderIcon= (icon)=>{
+if(icon == "customers")
+return <PeopleAltOutlinedIcon fontSize='medium' style={{color: "blue"}} className="font-size-24" />
+else if(icon == "cards")
+return <StorefrontOutlinedIcon  fontSize='medium' style={{color: "blue"}} className="font-size-24" />
+else
+return <BusinessCenterOutlinedIcon fontSize='medium' style={{color: "blue"}} className="font-size-24" />
+}
 export default function Card({cardInfo}) {
   return (
     <div className="col-md-4">
@@ -11,7 +22,10 @@ export default function Card({cardInfo}) {
                     <h4 className="mb-0"><span id="customerTotal">{cardInfo.total}</span></h4>
                 </div>
                 <div className="text-primary">
-                    <i className={`font-size-24 ${cardInfo.icon}`}></i>
+                    {
+                        renderIcon(cardInfo.icon)
+                    }
+                  
                 </div>
             </div>
         </div>

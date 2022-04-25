@@ -8,6 +8,8 @@ import '../src/assets/css/app.css';
 import Customer from './customer/pages/Customer';
 import ErrorBoundary from './ErrorBoundary';
 import './assets/css/bootstrap.min.css'
+
+
 function App() {
   
   let routes;

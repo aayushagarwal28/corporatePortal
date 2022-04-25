@@ -153,6 +153,8 @@ export default function Customer() {
                                                 columns={columns}
                                                 data={customersData}
                                                 pagination
+                                                progressPending={isLoading} 
+                                                progressComponent={<><LoadingSpinner asOverlay/></>}
                                             
                                             />
 

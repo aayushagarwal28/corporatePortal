@@ -12,19 +12,19 @@ export default function Home() {
         id: 1,
         title: "Total Customers",
         total: 900,
-        icon: "ri-stack-line"
+        icon: "customers"
 
     },{
         id: 2,
         title: "Total Cards",
         total: 43,
-        icon: "ri-store-2-line"
+        icon: "cards"
 
     },{
         id: 3,
-        title: "Total Customers",
-        total: 900,
-        icon: "ri-briefcase-4-line"
+        title: "Total Transactions",
+        total: 340,
+        icon: "transactions"
 
     }]
     return (
