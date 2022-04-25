@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/corporatePortal/static/css/main.5f678ca9.chunk.css",
+    "main.js": "/corporatePortal/static/js/main.d9a172fa.chunk.js",
+    "main.js.map": "/corporatePortal/static/js/main.d9a172fa.chunk.js.map",
+    "runtime-main.js": "/corporatePortal/static/js/runtime-main.eb7e5c44.js",
+    "runtime-main.js.map": "/corporatePortal/static/js/runtime-main.eb7e5c44.js.map",
+    "static/css/2.68a81a89.chunk.css": "/corporatePortal/static/css/2.68a81a89.chunk.css",
+    "static/js/2.fcaa4a97.chunk.js": "/corporatePortal/static/js/2.fcaa4a97.chunk.js",
+    "static/js/2.fcaa4a97.chunk.js.map": "/corporatePortal/static/js/2.fcaa4a97.chunk.js.map",
+    "index.html": "/corporatePortal/index.html",
+    "precache-manifest.907118a969fd09866633c06f42384003.js": "/corporatePortal/precache-manifest.907118a969fd09866633c06f42384003.js",
+    "service-worker.js": "/corporatePortal/service-worker.js",
+    "static/css/2.68a81a89.chunk.css.map": "/corporatePortal/static/css/2.68a81a89.chunk.css.map",
+    "static/css/main.5f678ca9.chunk.css.map": "/corporatePortal/static/css/main.5f678ca9.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb7e5c44.js",
+    "static/css/2.68a81a89.chunk.css",
+    "static/js/2.fcaa4a97.chunk.js",
+    "static/css/main.5f678ca9.chunk.css",
+    "static/js/main.d9a172fa.chunk.js"
+  ]
+}
