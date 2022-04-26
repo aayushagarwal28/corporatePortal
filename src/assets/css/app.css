@@ -59,6 +59,9 @@ File: Main Css File
   src: url("../fonts/inter-bold.woff2") format("woff2"), url("../fonts/iter-bold.woff") format("woff"); }
 */
 
+@import url(https://code.highcharts.com/7.0.0/css/themes/dark-unica.css);
+
+
 #page-topbar {
   position: fixed;
   top: 0;
