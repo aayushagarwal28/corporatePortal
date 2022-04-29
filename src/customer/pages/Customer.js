@@ -93,12 +93,21 @@ const customerdata = [
 export default function Customer() {
 
     const [customersData, setCustomersData] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
     const {isLoading,error,sendRequest,clearError} = useApi();
 
     useEffect(() => {
         fetchCustomerList();
      
     }, [])
+
+    
+    useEffect(() => {
+       globalSearch();
+     
+    }, [searchInput])
+
     
     const fetchCustomerList= async()=>{
        
@@ -109,6 +118,33 @@ export default function Customer() {
         catch(err){
            console.log("No data found"); 
         }
+    }
+
+    const updateSearch=(event)=>{
+        event.preventDefault();
+        setSearchInput(event.target.value)
+    }
+
+    
+
+    const globalSearch = () => {
+     
+    
+        let filteredData = customersData.filter(value => 
+            (value.gender.toLowerCase() == searchInput.toLowerCase()) ||
+            value.firstName.toLowerCase() == (searchInput.toLowerCase()) ||
+            value.lastName.toLowerCase() == (searchInput.toLowerCase()) ||
+            value.addressLine1.toLowerCase() == (searchInput.toLowerCase()) ||
+            value.addressCountry.toLowerCase() ==(searchInput.toLowerCase()) ||
+            value.city.toLowerCase() == (searchInput.toLowerCase()) ||
+            value.email.toLowerCase() == (searchInput.toLowerCase()) ||
+            value.dateOfBirth.toLowerCase().includes(searchInput.toLowerCase()) ||
+            value.customerId
+              .toString()
+              .toLowerCase()
+              .includes(searchInput.toLowerCase()
+        ));
+        setFilteredData(filteredData);
     }
     return (
         <>
@@ -149,9 +185,13 @@ export default function Customer() {
                                         <p className="card-title-desc">
                                         </p>
 
+                                        <div id="selection-datatable_filter" class="dataTables_filter"><label>
+										Search:
+                                        <input value={searchInput} onChange={updateSearch}  type="search" class="form-control form-control-sm" placeholder="" /></label>
+										</div>
                                             <DataTable
                                                 columns={columns}
-                                                data={customersData}
+                                                data={filteredData && filteredData.length ? filteredData : customersData}
                                                 pagination
                                                 progressPending={isLoading} 
                                                 progressComponent={<><LoadingSpinner asOverlay/></>}
